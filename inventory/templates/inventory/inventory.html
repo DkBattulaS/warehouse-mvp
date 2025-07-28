@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Warehouse Inventory</title>
+</head>
+<body>
+    <h1>Inventory Overview</h1>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Product Name</th>
+            <th>SKU</th>
+            <th>Current Stock</th>
+        </tr>
+        {% for item in inventory %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.sku }}</td>
+            <td>{{ item.stock }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
